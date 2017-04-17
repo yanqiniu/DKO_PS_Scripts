@@ -22,7 +22,7 @@ var chipNumLayer  = labelGroup.layers[7];
 
 (function main()
 {
-	var obj = loadJson('CardsData.json');
+	var obj = loadJson('Cards.json');
 	var cards = obj.cards;
 
 	for(var i = 0; i < cards.length; i++)
