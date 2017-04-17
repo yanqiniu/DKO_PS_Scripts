@@ -1,5 +1,5 @@
-﻿characterName,cardNum,hit,chip,meter
-roy,A,5,3,2
-alex,Q,23,4,1
-cassie,1,1,1,5
-hmm,2,4,2,2
+﻿character,card_number,move1,hit,chip,meter,move2
+roy,A,Mid,3,2,5,Dodge
+alex,Q,Mid,4,1,2,Dodge
+cassie,1,Attack,1,5,2,Block
+hmm,2,Attack,2,2,1,Block

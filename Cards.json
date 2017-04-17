@@ -1,32 +1,40 @@
 { "cards":[
 {
-"﻿characterName" : "roy",
-"cardNum" : "A",
-"hit" : "5",
-"chip" : "3",
-"meter" : "2"
-},
-
-{
-"﻿characterName" : "alex",
-"cardNum" : "Q",
-"hit" : "23",
-"chip" : "4",
-"meter" : "1"
-},
-
-{
-"﻿characterName" : "cassie",
-"cardNum" : "1",
-"hit" : "1",
-"chip" : "1",
-"meter" : "5"
-},
-
-{
-"﻿characterName" : "hmm",
-"cardNum" : "2",
-"hit" : "4",
+"﻿character" : "roy",
+"card_number" : "A",
+"move1" : "Mid",
+"hit" : "3",
 "chip" : "2",
-"meter" : "2"
+"meter" : "5",
+"move2" : "Dodge"
+},
+
+{
+"﻿character" : "alex",
+"card_number" : "Q",
+"move1" : "Mid",
+"hit" : "4",
+"chip" : "1",
+"meter" : "2",
+"move2" : "Dodge"
+},
+
+{
+"﻿character" : "cassie",
+"card_number" : "1",
+"move1" : "Attack",
+"hit" : "1",
+"chip" : "5",
+"meter" : "2",
+"move2" : "Block"
+},
+
+{
+"﻿character" : "hmm",
+"card_number" : "2",
+"move1" : "Attack",
+"hit" : "2",
+"chip" : "2",
+"meter" : "1",
+"move2" : "Block"
 }]}
