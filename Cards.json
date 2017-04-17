@@ -1,0 +1,32 @@
+{ "cards":[
+{
+"﻿characterName" : "roy",
+"cardNum" : "A",
+"hit" : "5",
+"chip" : "3",
+"meter" : "2"
+},
+
+{
+"﻿characterName" : "alex",
+"cardNum" : "Q",
+"hit" : "23",
+"chip" : "4",
+"meter" : "1"
+},
+
+{
+"﻿characterName" : "cassie",
+"cardNum" : "1",
+"hit" : "1",
+"chip" : "1",
+"meter" : "5"
+},
+
+{
+"﻿characterName" : "hmm",
+"cardNum" : "2",
+"hit" : "4",
+"chip" : "2",
+"meter" : "2"
+}]}
