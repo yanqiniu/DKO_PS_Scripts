@@ -53,7 +53,10 @@ function processSingleCard(index, cards)
 {
 	charnameLayer.textItem.contents   = cards[index].character;
 	move1Layer.textItem.contents      = cards[index].move1;
+	move1Layer.textItem.color 		  = getMoveColor(cards[index].move1, false);
 	move2Layer.textItem.contents      = cards[index].move2;
+	move2Layer.textItem.color 		  = getMoveColor(cards[index].move2, false);
+
 	cardNum1Layer.textItem.contents   = cards[index].card_number;
 	cardNum2Layer.textItem.contents   = cards[index].card_number;
 	hitNumLayer.textItem.contents     = cards[index].hit;
@@ -63,9 +66,19 @@ function processSingleCard(index, cards)
 	nextComboLayer.textItem.contents  = cards[index].next_in_combo;
 	nextCombo2Layer.textItem.contents = cards[index].next_in_combo2;
 	chipLayer.textItem.contents           = cards[index].chip;
+	if(chipLayer.textItem.contents == "(0)")
+	{
+		chipLayer.visible = false;
+	}
+	else
+	{
+		chipLayer.visible = true;
+	}
+
 	if(cards[index].card_number == 'J' || cards[index].card_number == 'Q' || cards[index].card_number == 'K')
 	{
 		setSpecialVisibilities(true);
+		move1Layer.textItem.color = getMoveColor("", true);
 	}
 	else
 	{
@@ -84,7 +97,6 @@ function setSpecialVisibilities(isSpecial)
 	move2Layer.visible = (!isSpecial);
 	nextCombo2Layer.visible = (!isSpecial);
 	meter2NumLayer.visible = (!isSpecial);
-	cardNum2Layer.visible = (!isSpecial);
 }
 
 function processSingleCardDots(index, cards)
@@ -112,6 +124,62 @@ function processSingleCardDots(index, cards)
 			dotGroup.layers[i].visible = true;
 		}
 	}
+}
+
+function getMoveColor(move, isSpecial)
+{
+	if(isSpecial == true)
+	{
+		textColor = new SolidColor();
+		textColor.rgb.red = 229;
+		textColor.rgb.green = 204;
+		textColor.rgb.blue = 30;
+		return textColor;
+	}
+	else
+	{
+		textColor = new SolidColor();
+
+		if(move == "Normal")
+		{
+			textColor.rgb.red = 255;
+			textColor.rgb.green = 100;
+			textColor.rgb.blue = 100;
+		}
+		else if(move == "Strong")
+		{
+			textColor.rgb.red = 255;
+			textColor.rgb.green = 30;
+			textColor.rgb.blue = 30;
+		}
+		else if(move == "Throw")
+		{
+			textColor.rgb.red = 30;
+			textColor.rgb.green = 30;
+			textColor.rgb.blue = 255;
+		}
+		else if(move == "Dodge")
+		{
+			textColor.rgb.red = 30;
+			textColor.rgb.green = 255;
+			textColor.rgb.blue = 30;
+		}
+		else if(move == "Block")
+		{
+			textColor.rgb.red = 0;
+			textColor.rgb.green = 0;
+			textColor.rgb.blue = 0;
+		}
+		else
+		{
+			textColor.rgb.red = 0;
+			textColor.rgb.green = 0;
+			textColor.rgb.blue = 0;
+		}
+
+		return textColor;
+	}
+
 }
 
 function setMoveImage(index, cards)
