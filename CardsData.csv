@@ -1,5 +1,13 @@
-character,card_number,move1,move2,hit,chip,max_chip,meter,next_in_combo,move_image,description
-roy,A,Mid,Dodge,3,2,5,5,"N, S",Attack,""
-alex,Q,Mid,Dodge,4,1,4,2,"T, D",Block,
-cassie,1,Attack,Block,1,5,6,2,"D / S",Throw,""
-hmm,2,Attack,Block,2,2,2,1,N / B,Dodge,
+character,card_number,move1,hit,chip,combo,max_combo,meter,next_in_combo,move2,meter2,next_in_combo2,move_image,description
+Alexandre,2,Normal,2,0,1,6,1,"C,A,O",Dodge,0,"F,U,C,K",Dodge,
+Alexandre,3,Normal,2,0,1,6,1,"C,A,O",Dodge,0,"F,U,C,K",Dodge,
+Alexandre,4,Normal,3,0,1,6,1,"C,A,O",Dodge,0,"F,U,C,K",Attack,
+Alexandre,5,Normal,3,0,1,6,1,"C,A,O",Dodge,0,"F,U,C,K",Attack,
+Alexandre,6,Normal,4,1,1,6,1,"C,A,O",Dodge,0,"F,U,C,K",Attack,
+Alexandre,7,Strong,5,2,2,6,2,"C,A,O",Block,3,"F,U,C,K",Attack,
+Alexandre,8,Strong,6,2,2,6,2,"C,A,O",Block,3,"F,U,C,K",Attack,
+Alexandre,9,Throw,4,0,1,6,1,"C,A,O",Block,3,"F,U,C,K",Throw,
+Alexandre,10,Throw,5,0,1,6,1,"C,A,O",Block,3,"F,U,C,K",Block,
+Alexandre,J,Strong,10,4,2,6,0,"C,A,O", , ,"F,U,C,K",Attack,This move is sick.
+Alexandre,Q,Strong,12,5,3,6,0,"C,A,O", , ,"F,U,C,K",Attack,This move is sicker.
+Alexandre,K,Special,1,0,1,6,0,"C,A,O", , ,"F,U,C,K",Special,This move blows everything.

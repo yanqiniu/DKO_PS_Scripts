@@ -42,6 +42,8 @@ def processSlgLine(headers, line):
     for name in headers:
         name = FileHelper.stripnl(name)
         dataContent = FileHelper.stripnl(dataList[index])
+        if "chip" in name:
+            dataContent = "(" + dataContent + ")"
         if dataContent.startswith('\"'):
             toWrite += "\"{0}\" : {1},\r\n".format(name, dataContent)
         else:
