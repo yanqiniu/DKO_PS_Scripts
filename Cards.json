@@ -8,12 +8,12 @@
 "combo" : "1",
 "max_combo" : "6",
 "meter" : "1",
-"next_in_combo" : "C,A,O",
+"next_in_combo" : "3, K, Strong",
 "move2" : "Dodge",
 "meter2" : "0",
-"next_in_combo2" : "F,U,C,K",
+"next_in_combo2" : "Normal, Strong, Throw",
 "move_image" : "Dodge",
-"description" : ""
+"description" : " "
 },
 
 {
@@ -25,12 +25,12 @@
 "combo" : "1",
 "max_combo" : "6",
 "meter" : "1",
-"next_in_combo" : "C,A,O",
+"next_in_combo" : "4, K, Strong",
 "move2" : "Dodge",
 "meter2" : "0",
-"next_in_combo2" : "F,U,C,K",
-"move_image" : "Dodge",
-"description" : ""
+"next_in_combo2" : "Normal, Strong, Throw",
+"move_image" : "Attack",
+"description" : " "
 },
 
 {
@@ -42,12 +42,12 @@
 "combo" : "1",
 "max_combo" : "6",
 "meter" : "1",
-"next_in_combo" : "C,A,O",
+"next_in_combo" : "5, K, Strong",
 "move2" : "Dodge",
 "meter2" : "0",
-"next_in_combo2" : "F,U,C,K",
-"move_image" : "Attack",
-"description" : ""
+"next_in_combo2" : "Normal, Strong, Throw",
+"move_image" : "Dodge",
+"description" : " "
 },
 
 {
@@ -59,12 +59,12 @@
 "combo" : "1",
 "max_combo" : "6",
 "meter" : "1",
-"next_in_combo" : "C,A,O",
+"next_in_combo" : "6, K, Strong",
 "move2" : "Dodge",
 "meter2" : "0",
-"next_in_combo2" : "F,U,C,K",
+"next_in_combo2" : "Normal, Strong, Throw",
 "move_image" : "Attack",
-"description" : ""
+"description" : " "
 },
 
 {
@@ -76,12 +76,12 @@
 "combo" : "1",
 "max_combo" : "6",
 "meter" : "1",
-"next_in_combo" : "C,A,O",
+"next_in_combo" : "K, Strong",
 "move2" : "Dodge",
 "meter2" : "0",
-"next_in_combo2" : "F,U,C,K",
+"next_in_combo2" : "Normal, Strong, Throw",
 "move_image" : "Attack",
-"description" : ""
+"description" : " "
 },
 
 {
@@ -93,12 +93,12 @@
 "combo" : "2",
 "max_combo" : "6",
 "meter" : "2",
-"next_in_combo" : "C,A,O",
+"next_in_combo" : "8, J, Q",
 "move2" : "Block",
 "meter2" : "3",
-"next_in_combo2" : "F,U,C,K",
-"move_image" : "Attack",
-"description" : ""
+"next_in_combo2" : "NONE",
+"move_image" : "Block",
+"description" : " "
 },
 
 {
@@ -110,12 +110,12 @@
 "combo" : "2",
 "max_combo" : "6",
 "meter" : "2",
-"next_in_combo" : "C,A,O",
+"next_in_combo" : "J, Q",
 "move2" : "Block",
 "meter2" : "3",
-"next_in_combo2" : "F,U,C,K",
+"next_in_combo2" : "NONE",
 "move_image" : "Attack",
-"description" : ""
+"description" : " "
 },
 
 {
@@ -127,12 +127,12 @@
 "combo" : "1",
 "max_combo" : "6",
 "meter" : "1",
-"next_in_combo" : "C,A,O",
+"next_in_combo" : "Normal, Strong",
 "move2" : "Block",
 "meter2" : "3",
-"next_in_combo2" : "F,U,C,K",
-"move_image" : "Throw",
-"description" : ""
+"next_in_combo2" : "NONE",
+"move_image" : "Block",
+"description" : " "
 },
 
 {
@@ -144,12 +144,12 @@
 "combo" : "1",
 "max_combo" : "6",
 "meter" : "1",
-"next_in_combo" : "C,A,O",
+"next_in_combo" : "Normal, Strong",
 "move2" : "Block",
 "meter2" : "3",
-"next_in_combo2" : "F,U,C,K",
-"move_image" : "Block",
-"description" : ""
+"next_in_combo2" : "NONE",
+"move_image" : "Throw",
+"description" : " "
 },
 
 {
@@ -161,12 +161,12 @@
 "combo" : "2",
 "max_combo" : "6",
 "meter" : "0",
-"next_in_combo" : "C,A,O",
+"next_in_combo" : "Strong",
 "move2" : " ",
 "meter2" : " ",
-"next_in_combo2" : "F,U,C,K",
-"move_image" : "Attack",
-"description" : "This move is sick."
+"next_in_combo2" : " ",
+"move_image" : "Special",
+"description" : "If this card wins combat, reduce the active opponent's meter to 0."
 },
 
 {
@@ -178,27 +178,639 @@
 "combo" : "3",
 "max_combo" : "6",
 "meter" : "0",
-"next_in_combo" : "C,A,O",
+"next_in_combo" : "Strong",
 "move2" : " ",
 "meter2" : " ",
-"next_in_combo2" : "F,U,C,K",
-"move_image" : "Attack",
-"description" : "This move is sicker."
+"next_in_combo2" : " ",
+"move_image" : "Special",
+"description" : "If this card wins combat, regain 6 health (or until max health)."
 },
 
 {
 "character" : "Alexandre",
 "card_number" : "K",
-"move1" : "Special",
+"move1" : "Normal",
 "hit" : "1",
 "chip" : "(0)",
 "combo" : "1",
 "max_combo" : "6",
 "meter" : "0",
-"next_in_combo" : "C,A,O",
+"next_in_combo" : "Normal, Strong",
 "move2" : " ",
 "meter2" : " ",
-"next_in_combo2" : "F,U,C,K",
+"next_in_combo2" : " ",
 "move_image" : "Special",
-"description" : "This move blows everything."
+"description" : "If this card wins combat, reset your combo to 0 (Alexandre can play another 6-cost combo this turn)."
+},
+
+{
+"character" : "Cassie",
+"card_number" : "2",
+"move1" : "Normal",
+"hit" : "3",
+"chip" : "(0)",
+"combo" : "1",
+"max_combo" : "3",
+"meter" : "1",
+"next_in_combo" : "3, J, K, Strong",
+"move2" : "Dodge",
+"meter2" : "0",
+"next_in_combo2" : "Normal, Strong, Throw",
+"move_image" : "Attack",
+"description" : " "
+},
+
+{
+"character" : "Cassie",
+"card_number" : "3",
+"move1" : "Normal",
+"hit" : "3",
+"chip" : "(0)",
+"combo" : "1",
+"max_combo" : "3",
+"meter" : "1",
+"next_in_combo" : "4, J, K, Strong",
+"move2" : "Dodge",
+"meter2" : "0",
+"next_in_combo2" : "Normal, Strong, Throw",
+"move_image" : "Dodge",
+"description" : " "
+},
+
+{
+"character" : "Cassie",
+"card_number" : "4",
+"move1" : "Normal",
+"hit" : "4",
+"chip" : "(0)",
+"combo" : "1",
+"max_combo" : "3",
+"meter" : "1",
+"next_in_combo" : "J, K, Strong",
+"move2" : "Dodge",
+"meter2" : "0",
+"next_in_combo2" : "Normal, Strong, Throw",
+"move_image" : "Attack",
+"description" : " "
+},
+
+{
+"character" : "Cassie",
+"card_number" : "5",
+"move1" : "Strong",
+"hit" : "5",
+"chip" : "(1)",
+"combo" : "2",
+"max_combo" : "3",
+"meter" : "2",
+"next_in_combo" : "6, K*",
+"move2" : "Block",
+"meter2" : "3",
+"next_in_combo2" : "NONE",
+"move_image" : "Block",
+"description" : " "
+},
+
+{
+"character" : "Cassie",
+"card_number" : "6",
+"move1" : "Strong",
+"hit" : "6",
+"chip" : "(2)",
+"combo" : "2",
+"max_combo" : "3",
+"meter" : "2",
+"next_in_combo" : "7, K*",
+"move2" : "Block",
+"meter2" : "3",
+"next_in_combo2" : "NONE",
+"move_image" : "Attack",
+"description" : " "
+},
+
+{
+"character" : "Cassie",
+"card_number" : "7",
+"move1" : "Strong",
+"hit" : "6",
+"chip" : "(2)",
+"combo" : "2",
+"max_combo" : "3",
+"meter" : "2",
+"next_in_combo" : "K*",
+"move2" : "Block",
+"meter2" : "3",
+"next_in_combo2" : "NONE",
+"move_image" : "Attack",
+"description" : " "
+},
+
+{
+"character" : "Cassie",
+"card_number" : "8",
+"move1" : "Throw",
+"hit" : "5",
+"chip" : "(0)",
+"combo" : "2",
+"max_combo" : "3",
+"meter" : "1",
+"next_in_combo" : "Normal, Strong",
+"move2" : "Block",
+"meter2" : "3",
+"next_in_combo2" : "NONE",
+"move_image" : "Block",
+"description" : " "
+},
+
+{
+"character" : "Cassie",
+"card_number" : "9",
+"move1" : "Throw",
+"hit" : "6",
+"chip" : "(0)",
+"combo" : "2",
+"max_combo" : "3",
+"meter" : "1",
+"next_in_combo" : "Normal, Strong",
+"move2" : "Block",
+"meter2" : "3",
+"next_in_combo2" : "NONE",
+"move_image" : "Throw",
+"description" : " "
+},
+
+{
+"character" : "Cassie",
+"card_number" : "10",
+"move1" : "Throw",
+"hit" : "6",
+"chip" : "(0)",
+"combo" : "2",
+"max_combo" : "3",
+"meter" : "1",
+"next_in_combo" : "Normal, Strong",
+"move2" : "Block",
+"meter2" : "3",
+"next_in_combo2" : "NONE",
+"move_image" : "Throw",
+"description" : " "
+},
+
+{
+"character" : "Cassie",
+"card_number" : "J",
+"move1" : "Normal",
+"hit" : "7",
+"chip" : "(3)",
+"combo" : "1",
+"max_combo" : "3",
+"meter" : "4",
+"next_in_combo" : "Normal, Strong",
+"move2" : " ",
+"meter2" : " ",
+"next_in_combo2" : " ",
+"move_image" : "Special",
+"description" : "If this card is played as the first card of a tag-in, this card does +6 Dmg/+6 Chip."
+},
+
+{
+"character" : "Cassie",
+"card_number" : "Q",
+"move1" : "Normal",
+"hit" : "12",
+"chip" : "(8)",
+"combo" : "1",
+"max_combo" : "3",
+"meter" : "5",
+"next_in_combo" : "Normal, Strong",
+"move2" : " ",
+"meter2" : " ",
+"next_in_combo2" : " ",
+"move_image" : "Special",
+"description" : "This card may only be played while tagging in."
+},
+
+{
+"character" : "Cassie",
+"card_number" : "K",
+"move1" : "Normal",
+"hit" : "10",
+"chip" : "(7)",
+"combo" : "2",
+"max_combo" : "3",
+"meter" : "1",
+"next_in_combo" : "Normal, Strong",
+"move2" : " ",
+"meter2" : " ",
+"next_in_combo2" : " ",
+"move_image" : "Special",
+"description" : "This card may instead be played as a Strong. When played as a Strong, this card does +5 Dmg/+5 Chip but costs +5 Cost to play."
+},
+
+{
+"character" : "Mascara",
+"card_number" : "2",
+"move1" : "Normal",
+"hit" : "2",
+"chip" : "(0)",
+"combo" : "2",
+"max_combo" : "3",
+"meter" : "1",
+"next_in_combo" : "3, Q, Throw",
+"move2" : "Block",
+"meter2" : "3",
+"next_in_combo2" : "NONE",
+"move_image" : "Attack",
+"description" : " "
+},
+
+{
+"character" : "Mascara",
+"card_number" : "3",
+"move1" : "Normal",
+"hit" : "3",
+"chip" : "(0)",
+"combo" : "2",
+"max_combo" : "3",
+"meter" : "1",
+"next_in_combo" : "4, Q, Throw",
+"move2" : "Block",
+"meter2" : "3",
+"next_in_combo2" : "NONE",
+"move_image" : "Block",
+"description" : " "
+},
+
+{
+"character" : "Mascara",
+"card_number" : "4",
+"move1" : "Normal",
+"hit" : "4",
+"chip" : "(0)",
+"combo" : "2",
+"max_combo" : "3",
+"meter" : "2",
+"next_in_combo" : "Q, Throw",
+"move2" : "Block",
+"meter2" : "3",
+"next_in_combo2" : "NONE",
+"move_image" : "Attack",
+"description" : " "
+},
+
+{
+"character" : "Mascara",
+"card_number" : "5",
+"move1" : "Throw",
+"hit" : "2",
+"chip" : "(0)",
+"combo" : "1",
+"max_combo" : "3",
+"meter" : "2",
+"next_in_combo" : "6, Q, Normal",
+"move2" : "Dodge",
+"meter2" : "0",
+"next_in_combo2" : "Normal, Throw",
+"move_image" : "Dodge",
+"description" : " "
+},
+
+{
+"character" : "Mascara",
+"card_number" : "6",
+"move1" : "Throw",
+"hit" : "3",
+"chip" : "(0)",
+"combo" : "1",
+"max_combo" : "3",
+"meter" : "2",
+"next_in_combo" : "7, Q, Normal",
+"move2" : "Block",
+"meter2" : "3",
+"next_in_combo2" : "NONE",
+"move_image" : "Block",
+"description" : " "
+},
+
+{
+"character" : "Mascara",
+"card_number" : "7",
+"move1" : "Throw",
+"hit" : "3",
+"chip" : "(0)",
+"combo" : "1",
+"max_combo" : "3",
+"meter" : "2",
+"next_in_combo" : "8, Q, Normal",
+"move2" : "Dodge",
+"meter2" : "0",
+"next_in_combo2" : "Normal, Throw",
+"move_image" : "Throw",
+"description" : " "
+},
+
+{
+"character" : "Mascara",
+"card_number" : "8",
+"move1" : "Throw",
+"hit" : "3",
+"chip" : "(0)",
+"combo" : "1",
+"max_combo" : "3",
+"meter" : "2",
+"next_in_combo" : "9, Q, Normal",
+"move2" : "Block",
+"meter2" : "3",
+"next_in_combo2" : "NONE",
+"move_image" : "Throw",
+"description" : " "
+},
+
+{
+"character" : "Mascara",
+"card_number" : "9",
+"move1" : "Throw",
+"hit" : "4",
+"chip" : "(0)",
+"combo" : "1",
+"max_combo" : "3",
+"meter" : "2",
+"next_in_combo" : "10, Q, Normal",
+"move2" : "Dodge",
+"meter2" : "0",
+"next_in_combo2" : "Normal, Throw",
+"move_image" : "Throw",
+"description" : " "
+},
+
+{
+"character" : "Mascara",
+"card_number" : "10",
+"move1" : "Throw",
+"hit" : "4",
+"chip" : "(0)",
+"combo" : "1",
+"max_combo" : "3",
+"meter" : "2",
+"next_in_combo" : "Q, Normal",
+"move2" : "Block",
+"meter2" : "3",
+"next_in_combo2" : "NONE",
+"move_image" : "Throw",
+"description" : " "
+},
+
+{
+"character" : "Mascara",
+"card_number" : "J",
+"move1" : "Block",
+"hit" : "0",
+"chip" : "(0)",
+"combo" : "0",
+"max_combo" : "3",
+"meter" : "8",
+"next_in_combo" : "NONE",
+"move2" : " ",
+"meter2" : " ",
+"next_in_combo2" : " ",
+"move_image" : "Block",
+"description" : "If this card wins combat, attach this card to M?scara."
+},
+
+{
+"character" : "Mascara",
+"card_number" : "Q",
+"move1" : "Throw",
+"hit" : "1",
+"chip" : "(0)",
+"combo" : "1",
+"max_combo" : "3",
+"meter" : "8",
+"next_in_combo" : "Normal, Throw",
+"move2" : " ",
+"meter2" : " ",
+"next_in_combo2" : " ",
+"move_image" : "Special",
+"description" : "If this card wins combat, attach this card to M?scara."
+},
+
+{
+"character" : "Mascara",
+"card_number" : "K",
+"move1" : "Block",
+"hit" : "0",
+"chip" : "(0)",
+"combo" : "0",
+"max_combo" : "3",
+"meter" : "8",
+"next_in_combo" : "NONE",
+"move2" : " ",
+"meter2" : " ",
+"next_in_combo2" : " ",
+"move_image" : "Block",
+"description" : "If this card wins combat, attach this card to M?scara."
+},
+
+{
+"character" : "Carson",
+"card_number" : "2",
+"move1" : "Normal",
+"hit" : "2",
+"chip" : "(0)",
+"combo" : "1",
+"max_combo" : "5",
+"meter" : "1",
+"next_in_combo" : "3, Q, Strong",
+"move2" : "Dodge",
+"meter2" : "0",
+"next_in_combo2" : "Normal, Strong, Throw",
+"move_image" : "Dodge",
+"description" : ""
+},
+
+{
+"character" : "Carson",
+"card_number" : "3",
+"move1" : "Normal",
+"hit" : "3",
+"chip" : "(0)",
+"combo" : "1",
+"max_combo" : "5",
+"meter" : "1",
+"next_in_combo" : "4, Q, Strong",
+"move2" : "Dodge",
+"meter2" : "0",
+"next_in_combo2" : "Normal, Strong, Throw",
+"move_image" : "Attack",
+"description" : ""
+},
+
+{
+"character" : "Carson",
+"card_number" : "4",
+"move1" : "Normal",
+"hit" : "4",
+"chip" : "(1)",
+"combo" : "1",
+"max_combo" : "5",
+"meter" : "1",
+"next_in_combo" : "5, Q, Strong",
+"move2" : "Dodge",
+"meter2" : "0",
+"next_in_combo2" : "Normal, Strong, Throw",
+"move_image" : "Dodge",
+"description" : ""
+},
+
+{
+"character" : "Carson",
+"card_number" : "5",
+"move1" : "Normal",
+"hit" : "5",
+"chip" : "(2)",
+"combo" : "1",
+"max_combo" : "5",
+"meter" : "1",
+"next_in_combo" : "Q, Strong",
+"move2" : "Dodge",
+"meter2" : "0",
+"next_in_combo2" : "Normal, Strong, Throw",
+"move_image" : "Attack",
+"description" : ""
+},
+
+{
+"character" : "Carson",
+"card_number" : "6",
+"move1" : "Strong",
+"hit" : "6",
+"chip" : "(3)",
+"combo" : "2",
+"max_combo" : "5",
+"meter" : "1",
+"next_in_combo" : "7, K",
+"move2" : "Block",
+"meter2" : "3",
+"next_in_combo2" : "NONE",
+"move_image" : "Block",
+"description" : ""
+},
+
+{
+"character" : "Carson",
+"card_number" : "7",
+"move1" : "Strong",
+"hit" : "7",
+"chip" : "(3)",
+"combo" : "2",
+"max_combo" : "5",
+"meter" : "1",
+"next_in_combo" : "K",
+"move2" : "Dodge",
+"meter2" : "0",
+"next_in_combo2" : "Normal, Strong, Throw",
+"move_image" : "Attack",
+"description" : ""
+},
+
+{
+"character" : "Carson",
+"card_number" : "8",
+"move1" : "Throw",
+"hit" : "3",
+"chip" : "(0)",
+"combo" : "1",
+"max_combo" : "5",
+"meter" : "1",
+"next_in_combo" : "Normal, Strong",
+"move2" : "Block",
+"meter2" : "3",
+"next_in_combo2" : "NONE",
+"move_image" : "Block",
+"description" : ""
+},
+
+{
+"character" : "Carson",
+"card_number" : "9",
+"move1" : "Throw",
+"hit" : "4",
+"chip" : "(0)",
+"combo" : "1",
+"max_combo" : "5",
+"meter" : "1",
+"next_in_combo" : "Normal, Strong",
+"move2" : "Block",
+"meter2" : "3",
+"next_in_combo2" : "NONE",
+"move_image" : "Attack",
+"description" : ""
+},
+
+{
+"character" : "Carson",
+"card_number" : "10",
+"move1" : "Throw",
+"hit" : "5",
+"chip" : "(0)",
+"combo" : "1",
+"max_combo" : "5",
+"meter" : "1",
+"next_in_combo" : "Normal, Strong",
+"move2" : "Block",
+"meter2" : "3",
+"next_in_combo2" : "NONE",
+"move_image" : "Attack",
+"description" : ""
+},
+
+{
+"character" : "Carson",
+"card_number" : "J",
+"move1" : "Throw",
+"hit" : "8",
+"chip" : "(0)",
+"combo" : "1",
+"max_combo" : "5",
+"meter" : "5",
+"next_in_combo" : "Normal, Strong",
+"move2" : " ",
+"meter2" : " ",
+"next_in_combo2" : " ",
+"move_image" : "Throw",
+"description" : "If this card loses combat, deal 3 damage to the opposing active player (Carson still takes any damage dealt)."
+},
+
+{
+"character" : "Carson",
+"card_number" : "Q",
+"move1" : "Normal",
+"hit" : "10",
+"chip" : "(0)",
+"combo" : "3",
+"max_combo" : "5",
+"meter" : "8",
+"next_in_combo" : "Normal, Strong",
+"move2" : " ",
+"meter2" : " ",
+"next_in_combo2" : " ",
+"move_image" : "Special",
+"description" : "This card wins combat against blocks and other attacks."
+},
+
+{
+"character" : "Carson",
+"card_number" : "K",
+"move1" : "Strong",
+"hit" : "12",
+"chip" : "(5)",
+"combo" : "2",
+"max_combo" : "5",
+"meter" : "8",
+"next_in_combo" : "Strong",
+"move2" : " ",
+"meter2" : " ",
+"next_in_combo2" : " ",
+"move_image" : "Special",
+"description" : "If this card is played as the result of [Waco Kid], this card does an extra +5 Dmg."
 }]}
