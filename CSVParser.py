@@ -3,6 +3,7 @@ import sys
 import marshal
 import webbrowser
 import FileHelper
+import re
 
 srcFilePath = "CardsData.csv"
 destFilePath = "Cards.json"
@@ -33,13 +34,19 @@ def main():
     print("Finished parsing csv file." )
 
 def processSlgLine(headers, line):
-    dataList = line.split(",")
+    PATTERN = re.compile(r'''((?:[^,"']|"[^"]*"|'[^']*')+)''')
+    dataList = PATTERN.split(line)[1::2]
+
     toWrite = "\r\n{\r\n"
     index = 0
     for name in headers:
         name = FileHelper.stripnl(name)
         dataContent = FileHelper.stripnl(dataList[index])
-        toWrite += "\"{0}\" : \"{1}\",\r\n".format(name, dataContent)
+        if dataContent.startswith('\"'):
+            toWrite += "\"{0}\" : {1},\r\n".format(name, dataContent)
+        else:
+            toWrite += "\"{0}\" : \"{1}\",\r\n".format(name, dataContent)
+
         index += 1
     toWrite = toWrite[:-3]
     toWrite += "\r\n},\r\n"

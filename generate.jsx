@@ -7,7 +7,13 @@
 var obj = loadJson('CardsData.json');
 
 var labelGroup = app.activeDocument.layerSets.getByName('DynamicLabels');
+
+// should be ordered as full dots 1-6 and then empty dots 1-6
 var dotGroup = app.activeDocument.layerSets.getByName('chipDots');
+
+// should be ordered as R,G,B,Y
+// inside of which attack, block, dodge, throw
+var moveImageGroup = app.activeDocument.layerSets.getByName('MoveImages');
 
 // I swear to god I'll kill whoever that changes the PSD layer sequence without letting me know.
 // ...with a spoon, I swear to god.
@@ -20,6 +26,8 @@ var hitNumLayer    = labelGroup.layers[5];
 var chipNumLayer   = labelGroup.layers[6];
 var meterNumLayer  = labelGroup.layers[7];
 var nextComboLayer = labelGroup.layers[8];
+
+var 
 
 (function main()
 {
@@ -73,6 +81,10 @@ function precessSingleCardDots(index, cards)
 			dotGroup.layers[i].visible = true;
 		}
 	}
+}
+
+function decideMoveImage(index, cards)
+{
 
 }
 

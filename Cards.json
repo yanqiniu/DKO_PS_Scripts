@@ -8,7 +8,9 @@
 "chip" : "2",
 "max_chip" : "5",
 "meter" : "5",
-"next_in_combo" : "N / S"
+"next_in_combo" : "N, S",
+"move_image" : "Attack",
+"description" : ""
 },
 
 {
@@ -20,7 +22,9 @@
 "chip" : "1",
 "max_chip" : "4",
 "meter" : "2",
-"next_in_combo" : "T / D"
+"next_in_combo" : "T, D",
+"move_image" : "Block",
+"description" : ""
 },
 
 {
@@ -32,7 +36,9 @@
 "chip" : "5",
 "max_chip" : "6",
 "meter" : "2",
-"next_in_combo" : "D / S"
+"next_in_combo" : "D / S",
+"move_image" : "Throw",
+"description" : ""
 },
 
 {
@@ -44,5 +50,7 @@
 "chip" : "2",
 "max_chip" : "2",
 "meter" : "1",
-"next_in_combo" : "N / B"
+"next_in_combo" : "N / B",
+"move_image" : "Dodge",
+"description" : ""
 }]}
