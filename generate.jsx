@@ -7,18 +7,19 @@
 var obj = loadJson('CardsData.json');
 
 var labelGroup = app.activeDocument.layerSets.getByName('DynamicLabels');
+var dotGroup = app.activeDocument.layerSets.getByName('chipDots');
 
 // I swear to god I'll kill whoever that changes the PSD layer sequence without letting me know.
 // ...with a spoon, I swear to god.
-var charnameLayer = labelGroup.layers[0];
-var move1Layer    = labelGroup.layers[1];
-var move2Layer    = labelGroup.layers[2];
-var cardNum1Layer = labelGroup.layers[3];
-var cardNum2Layer = labelGroup.layers[4];
-var hitNumLayer   = labelGroup.layers[5];
-var meterNumLayer = labelGroup.layers[6];
-var chipNumLayer  = labelGroup.layers[7];
-	
+var charnameLayer  = labelGroup.layers[0];
+var move1Layer     = labelGroup.layers[1];
+var move2Layer     = labelGroup.layers[2];
+var cardNum1Layer  = labelGroup.layers[3];
+var cardNum2Layer  = labelGroup.layers[4];
+var hitNumLayer    = labelGroup.layers[5];
+var chipNumLayer   = labelGroup.layers[6];
+var meterNumLayer  = labelGroup.layers[7];
+var nextComboLayer = labelGroup.layers[8];
 
 (function main()
 {
@@ -34,15 +35,45 @@ var chipNumLayer  = labelGroup.layers[7];
 
 function processSingleCard(index, cards)
 {
-	charnameLayer.textItem.contents = cards[index].character;
-	move1Layer.textItem.contents    = cards[index].move1;
-	move2Layer.textItem.contents    = cards[index].move2;
-	cardNum1Layer.textItem.contents = cards[index].card_number;
-	cardNum2Layer.textItem.contents = cards[index].card_number;
-	hitNumLayer.textItem.contents   = cards[index].hit;
-	meterNumLayer.textItem.contents = cards[index].meter;
-	chipNumLayer.textItem.contents  = cards[index].chip;
+	charnameLayer.textItem.contents  = cards[index].character;
+	move1Layer.textItem.contents     = cards[index].move1;
+	move2Layer.textItem.contents     = cards[index].move2;
+	cardNum1Layer.textItem.contents  = cards[index].card_number;
+	cardNum2Layer.textItem.contents  = cards[index].card_number;
+	hitNumLayer.textItem.contents    = cards[index].hit;
+	meterNumLayer.textItem.contents  = cards[index].meter;
+	chipNumLayer.textItem.contents   = cards[index].chip;
+	nextComboLayer.textItem.contents = cards[index].next_in_combo;
+	precessSingleCardDots(index, cards);
 	savePng(index);
+}
+
+function precessSingleCardDots(index, cards)
+{
+	var chip = cards[index].chip;
+	var chipMax = cards[index].max_chip;
+
+	for(var i = 0; i < 12; i++)
+	{
+		dotGroup.layers[i].visible = false;
+	}
+
+	for(var i = 0; i < 6; i++)
+	{
+		if(chip > i)
+		{
+			dotGroup.layers[i].visible = true;
+		}
+	}
+
+	for(var i = 6; i < 12; i++)
+	{
+		if(chipMax > (i - 6))
+		{
+			dotGroup.layers[i].visible = true;
+		}
+	}
+
 }
 
 function loadJson(path)

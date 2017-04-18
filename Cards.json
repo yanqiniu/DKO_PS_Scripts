@@ -3,38 +3,46 @@
 "character" : "roy",
 "card_number" : "A",
 "move1" : "Mid",
+"move2" : "Dodge",
 "hit" : "3",
 "chip" : "2",
+"max_chip" : "5",
 "meter" : "5",
-"move2" : "Dodge"
+"next_in_combo" : "N / S"
 },
 
 {
 "character" : "alex",
 "card_number" : "Q",
 "move1" : "Mid",
+"move2" : "Dodge",
 "hit" : "4",
 "chip" : "1",
+"max_chip" : "4",
 "meter" : "2",
-"move2" : "Dodge"
+"next_in_combo" : "T / D"
 },
 
 {
 "character" : "cassie",
 "card_number" : "1",
 "move1" : "Attack",
+"move2" : "Block",
 "hit" : "1",
 "chip" : "5",
+"max_chip" : "6",
 "meter" : "2",
-"move2" : "Block"
+"next_in_combo" : "D / S"
 },
 
 {
 "character" : "hmm",
 "card_number" : "2",
 "move1" : "Attack",
+"move2" : "Block",
 "hit" : "2",
 "chip" : "2",
+"max_chip" : "2",
 "meter" : "1",
-"move2" : "Block"
+"next_in_combo" : "N / B"
 }]}

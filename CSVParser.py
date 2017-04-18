@@ -37,8 +37,6 @@ def processSlgLine(headers, line):
     toWrite = "\r\n{\r\n"
     index = 0
     for name in headers:
-        if index == 0:
-            name = name[3:]
         name = FileHelper.stripnl(name)
         dataContent = FileHelper.stripnl(dataList[index])
         toWrite += "\"{0}\" : \"{1}\",\r\n".format(name, dataContent)

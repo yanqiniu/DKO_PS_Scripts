@@ -1,5 +1,5 @@
-﻿character,card_number,move1,hit,chip,meter,move2
-roy,A,Mid,3,2,5,Dodge
-alex,Q,Mid,4,1,2,Dodge
-cassie,1,Attack,1,5,2,Block
-hmm,2,Attack,2,2,1,Block
+character,card_number,move1,move2,hit,chip,max_chip,meter,next_in_combo
+roy,A,Mid,Dodge,3,2,5,5,N / S
+alex,Q,Mid,Dodge,4,1,4,2,T / D
+cassie,1,Attack,Block,1,5,6,2,D / S
+hmm,2,Attack,Block,2,2,2,1,N / B
