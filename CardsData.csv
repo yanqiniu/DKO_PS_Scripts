@@ -32,9 +32,9 @@ Mascara,7,Throw,3,0,1,3,2,"8, Q, Normal",Dodge,0,"Normal, Throw",Throw,
 Mascara,8,Throw,3,0,1,3,2,"9, Q, Normal",Block,3,NONE,Throw, 
 Mascara,9,Throw,4,0,1,3,2,"10, Q, Normal",Dodge,0,"Normal, Throw",Throw, 
 Mascara,10,Throw,4,0,1,3,2,"Q, Normal",Block,3,NONE,Throw, 
-Mascara,J,Block,0,0,0,3,8,NONE, , , ,Block,"If this card wins combat, attach this card to M?scara."
-Mascara,Q,Throw,1,0,1,3,8,"Normal, Throw", , , ,Special,"If this card wins combat, attach this card to M?scara."
-Mascara,K,Block,0,0,0,3,8,NONE, , , ,Block,"If this card wins combat, attach this card to M?scara."
+Mascara,J,Block,0,0,0,3,8,NONE, , , ,Block,"If this card wins combat, attach this card to M¨¢scara."
+Mascara,Q,Throw,1,0,1,3,8,"Normal, Throw", , , ,Special,"If this card wins combat, attach this card to M¨¢scara."
+Mascara,K,Block,0,0,0,3,8,NONE, , , ,Block,"If this card wins combat, attach this card to M¨¢scara."
 Carson,2,Normal,2,0,1,5,1,"3, Q, Strong",Dodge,0,"Normal, Strong, Throw",Dodge,
 Carson,3,Normal,3,0,1,5,1,"4, Q, Strong",Dodge,0,"Normal, Strong, Throw",Attack,
 Carson,4,Normal,4,1,1,5,1,"5, Q, Strong",Dodge,0,"Normal, Strong, Throw",Dodge,

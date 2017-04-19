@@ -4,12 +4,11 @@
 // Learn how to save PNG
 // Learn how to read JSON
 
-var obj = loadJson('CardsData.json');
-
 var labelGroup                  = app.activeDocument.layerSets.getByName('DynamicLabels');
 var staticLabelGroup            = app.activeDocument.layerSets.getByName('StaticLabels_Universal');
 var staticLabelGroup_special    = app.activeDocument.layerSets.getByName('StaticLabels_Special');
 var staticLabelGroup_nonspecial = app.activeDocument.layerSets.getByName('StaticLabels_NonSpecial');
+var templateGroup               = app.activeDocument.layerSets.getByName('Templates');
 
 // should be ordered as full dots 1-6 and then empty dots 1-6
 var dotGroup = app.activeDocument.layerSets.getByName('ComboDots');
@@ -33,7 +32,6 @@ var nextComboLayer  = labelGroup.layers[9];
 var nextCombo2Layer = labelGroup.layers[10];
 var descrpLayer     = labelGroup.layers[11];
 var chipLayer       = labelGroup.layers[12];
-
 
 (function main()
 {
@@ -77,6 +75,7 @@ function processSingleCard(index, cards)
 
 	if(cards[index].card_number == 'J' || cards[index].card_number == 'Q' || cards[index].card_number == 'K')
 	{
+		descrpLayer.textItem.contents = cards[index].description;
 		setSpecialVisibilities(true);
 		move1Layer.textItem.color = getMoveColor("", true);
 	}
@@ -97,6 +96,8 @@ function setSpecialVisibilities(isSpecial)
 	move2Layer.visible = (!isSpecial);
 	nextCombo2Layer.visible = (!isSpecial);
 	meter2NumLayer.visible = (!isSpecial);
+	templateGroup.layers[0].visible = (!isSpecial);
+	templateGroup.layers[1].visible = isSpecial;
 }
 
 function processSingleCardDots(index, cards)
@@ -287,4 +288,3 @@ function savePng(name, number)
 	var opts = new PNGSaveOptions();
 	doc.saveAs(file, opts, true);
 }
-//alert(labelGroup.name);
