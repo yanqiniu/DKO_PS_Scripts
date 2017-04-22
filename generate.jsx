@@ -9,27 +9,30 @@ var staticLabelGroup            = app.activeDocument.layerSets.getByName('Static
 var staticLabelGroup_special    = app.activeDocument.layerSets.getByName('StaticLabels_Special');
 var staticLabelGroup_nonspecial = app.activeDocument.layerSets.getByName('StaticLabels_NonSpecial');
 var templateGroup               = app.activeDocument.layerSets.getByName('Templates');
+var borderGroup                 = app.activeDocument.layerSets.getByName('Borders');
 
 // should be ordered as full dots 1-6 and then empty dots 1-6
 var dotGroup = app.activeDocument.layerSets.getByName('ComboDots');
 
 // should be ordered as R,G,B,Y
 // inside of which attack, block, dodge, throw
-var moveImageGroup = app.activeDocument.layerSets.getByName('MoveImages');
+var moveImageGroup1 = app.activeDocument.layerSets.getByName('MoveImages');
+var moveImageGroup2 = app.activeDocument.layerSets.getByName('MoveImages_Bot');
+var moveImageGroupMid = app.activeDocument.layerSets.getByName('MoveImages_Mid');
 
 // I swear to god I'll kill whoever that changes the PSD layer sequence without letting me know.
 // ...with a spoon, I swear to god.
-var charnameLayer   = labelGroup.layers[0];
-var move1Layer      = labelGroup.layers[1];
-var move2Layer      = labelGroup.layers[2];
-var cardNum1Layer   = labelGroup.layers[3];
-var cardNum2Layer   = labelGroup.layers[4];
-var hitNumLayer     = labelGroup.layers[5];
-var combNumLayer    = labelGroup.layers[6];
-var meterNumLayer   = labelGroup.layers[7];
-var meter2NumLayer  = labelGroup.layers[8];
-var nextComboLayer  = labelGroup.layers[9];
-var nextCombo2Layer = labelGroup.layers[10];
+var move1Layer      = labelGroup.layers[0];
+var move2Layer      = labelGroup.layers[1];
+var cardNum1Layer   = labelGroup.layers[2];
+var cardNum2Layer   = labelGroup.layers[3];
+var hitNumLayer     = labelGroup.layers[4];
+var combNumLayer    = labelGroup.layers[5];
+var meterNumLayer   = labelGroup.layers[6];
+var meter2NumLayer  = labelGroup.layers[7];
+var nextComboLayer  = labelGroup.layers[8];
+var nextCombo2Layer = labelGroup.layers[9];
+var specialLayer    = labelGroup.layers[10];
 var descrpLayer     = labelGroup.layers[11];
 var chipLayer       = labelGroup.layers[12];
 
@@ -49,7 +52,6 @@ var chipLayer       = labelGroup.layers[12];
 
 function processSingleCard(index, cards)
 {
-	charnameLayer.textItem.contents   = cards[index].character;
 	move1Layer.textItem.contents      = cards[index].move1;
 	move1Layer.textItem.color 		  = getMoveColor(cards[index].move1, false);
 	move2Layer.textItem.contents      = cards[index].move2;
@@ -63,7 +65,8 @@ function processSingleCard(index, cards)
 	combNumLayer.textItem.contents    = cards[index].combo;
 	nextComboLayer.textItem.contents  = cards[index].next_in_combo;
 	nextCombo2Layer.textItem.contents = cards[index].next_in_combo2;
-	chipLayer.textItem.contents           = cards[index].chip;
+	chipLayer.textItem.contents       = cards[index].chip;
+	specialLayer.textItem.contents    = cards[index].special_name;
 	if(chipLayer.textItem.contents == "(0)")
 	{
 		chipLayer.visible = false;
@@ -73,18 +76,24 @@ function processSingleCard(index, cards)
 		chipLayer.visible = true;
 	}
 
-	if(cards[index].card_number == 'J' || cards[index].card_number == 'Q' || cards[index].card_number == 'K')
+
+	resetImages(true, true, true);
+	if(cards[index].card_number == '10' || cards[index].card_number == '11' || cards[index].card_number == '12')
 	{
+		setMoveImage(cards[index].character, cards[index].move1, moveImageGroupMid);
 		descrpLayer.textItem.contents = cards[index].description;
 		setSpecialVisibilities(true);
 		move1Layer.textItem.color = getMoveColor("", true);
+
 	}
 	else
 	{
+		setMoveImage(cards[index].character, cards[index].move1, moveImageGroup1);
+		setMoveImage(cards[index].character, cards[index].move2, moveImageGroup2);
 		setSpecialVisibilities(false);
 	}
+	setBorder(cards[index].character);
 	processSingleCardDots(index, cards);
-	setMoveImage(index, cards);
 	savePng(cards[index].character, cards[index].card_number);
 }
 
@@ -96,8 +105,7 @@ function setSpecialVisibilities(isSpecial)
 	move2Layer.visible = (!isSpecial);
 	nextCombo2Layer.visible = (!isSpecial);
 	meter2NumLayer.visible = (!isSpecial);
-	templateGroup.layers[0].visible = (!isSpecial);
-	templateGroup.layers[1].visible = isSpecial;
+	specialLayer.visible = isSpecial;
 }
 
 function processSingleCardDots(index, cards)
@@ -132,13 +140,20 @@ function getMoveColor(move, isSpecial)
 	if(isSpecial == true)
 	{
 		textColor = new SolidColor();
-		textColor.rgb.red = 229;
-		textColor.rgb.green = 204;
-		textColor.rgb.blue = 30;
+		textColor.rgb.red = 253;
+		textColor.rgb.green = 221;
+		textColor.rgb.blue = 63;
 		return textColor;
 	}
 	else
 	{
+		textColor = new SolidColor();
+		textColor.rgb.red = 255;
+		textColor.rgb.green = 156;
+		textColor.rgb.blue = 0;
+		return textColor;
+
+		/*
 		textColor = new SolidColor();
 
 		if(move == "Normal")
@@ -177,95 +192,145 @@ function getMoveColor(move, isSpecial)
 			textColor.rgb.green = 0;
 			textColor.rgb.blue = 0;
 		}
+		*/
 
 		return textColor;
 	}
 
 }
 
-function setMoveImage(index, cards)
+function resetImages(reset1, reset2, resetMid)
 {
 	for(var i = 0; i < 16; i++)
 	{
-		moveImageGroup.layers[i].visible = false;
+		if(reset1 == true)
+		{
+			moveImageGroup1.layers[i].visible = false;
+		}
+		if(reset2 == true)
+		{
+			moveImageGroup2.layers[i].visible = false;
+		}
+		if(resetMid == true)
+		{
+			moveImageGroupMid.layers[i].visible = false;
+		}
+	}
+}
+
+function setBorder(character)
+{
+	for(var i = 0; i < 4; i++)
+	{
+		borderGroup.layers[i].visible = false;
+	}
+	if(character == "Cassie")
+	{
+		borderGroup.layers[0].visible = true;
+	}
+	else if(character == "Mascara")
+	{
+		borderGroup.layers[1].visible = true;
+	}
+	else if(character == "Alexandre")
+	{
+		borderGroup.layers[2].visible = true;
+	}
+	else if(character == "Carson")
+	{
+		borderGroup.layers[3].visible = true;
 	}
 
-	if(cards[index].character == "Cassie")
+}
+
+function setMoveImage(character, move, layerGroup)
+{
+	for(var i = 0; i < 16; i++)
 	{
-		if(cards[index].move_image == "Attack")
+		layerGroup.layers[i].visible = false;
+	}
+
+	if(character == "Cassie")
+	{
+		if(move == "Attack" || 
+			move == "Strong Attack")
 		{
-			moveImageGroup.layers[0].visible = true;
+			layerGroup.layers[0].visible = true;
 		}
-		if(cards[index].move_image == "Throw")
+		if(move == "Block")
 		{
-			moveImageGroup.layers[1].visible = true;
+			layerGroup.layers[1].visible = true;
 		}
-		if(cards[index].move_image == "Dodge")
+		if(move == "Dodge")
 		{
-			moveImageGroup.layers[2].visible = true;
+			layerGroup.layers[2].visible = true;
 		}
-		if(cards[index].move_image == "Block")
+		if(move == "Throw")
 		{
-			moveImageGroup.layers[3].visible = true;
+			layerGroup.layers[3].visible = true;
 		} 
 	}
-	if(cards[index].character == "Mascara")
+	else if(character == "Mascara")
 	{
-		if(cards[index].move_image == "Attack")
+		if(move == "Attack" || 
+			move == "Strong Attack")
 		{
-			moveImageGroup.layers[4].visible = true;
+			layerGroup.layers[4].visible = true;
 		}
-		if(cards[index].move_image == "Throw")
+		if(move == "Block")
 		{
-			moveImageGroup.layers[5].visible = true;
+			layerGroup.layers[5].visible = true;
 		}
-		if(cards[index].move_image == "Dodge")
+		if(move == "Dodge")
 		{
-			moveImageGroup.layers[6].visible = true;
+			layerGroup.layers[6].visible = true;
 		}
-		if(cards[index].move_image == "Block")
+		if(move == "Throw")
 		{
-			moveImageGroup.layers[7].visible = true;
+			layerGroup.layers[7].visible = true;
 		} 
 	}
-	if(cards[index].character == "Alexandre")
+	else if(character == "Alexandre")
 	{
-		if(cards[index].move_image == "Attack")
+		if(move == "Attack" || 
+			move == "Strong Attack")
 		{
-			moveImageGroup.layers[8].visible = true;
+			layerGroup.layers[8].visible = true;
 		}
-		if(cards[index].move_image == "Throw")
+		if(move == "Block")
 		{
-			moveImageGroup.layers[9].visible = true;
+			layerGroup.layers[9].visible = true;
 		}
-		if(cards[index].move_image == "Dodge")
+		if(move == "Dodge")
 		{
-			moveImageGroup.layers[10].visible = true;
+			layerGroup.layers[10].visible = true;
 		}
-		if(cards[index].move_image == "Block")
+		if(move == "Throw")
 		{
-			moveImageGroup.layers[11].visible = true;
+			layerGroup.layers[11].visible = true;
 		} 
 	}
-	if(cards[index].character == "Carson")
+	else if(character == "Carson")
 	{
-		if(cards[index].move_image == "Attack")
+		if(move == "Attack" || 
+			move == "Strong Attack")
 		{
-			moveImageGroup.layers[12].visible = true;
+			layerGroup.layers[12].visible = true;
 		}
-		if(cards[index].move_image == "Throw")
+		if(move == "Block")
 		{
-			moveImageGroup.layers[13].visible = true;
+			layerGroup.layers[13].visible = true;
 		}
-		if(cards[index].move_image == "Dodge")
+		if(move == "Dodge")
 		{
-			moveImageGroup.layers[14].visible = true;
+			layerGroup.layers[14].visible = true;
 		}
-		if(cards[index].move_image == "Block")
+		if(move == "Throw")
 		{
-			moveImageGroup.layers[15].visible = true;
+			layerGroup.layers[15].visible = true;
 		} 
 	}
+
 }
 
 function loadJson(path)
